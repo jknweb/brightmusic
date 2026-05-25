@@ -21,7 +21,7 @@ export default function Hero() {
         <p className={styles.subtitle}>La lumière par la musique.</p>
         <button className={styles.cta}>
           <Play size={18} fill="currentColor" />
-          <span>Écouter le dernier single</span>
+          <span>Écouter le dernier album</span>
         </button>
       </div>
     </section>
