@@ -1,0 +1,124 @@
+.section {
+  padding: 8rem 2rem;
+  background-color: var(--background);
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  display: flex;
+  gap: 4rem;
+  padding: 3rem;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.coverWrapper {
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.coverWrapper:hover {
+  transform: scale(1.02);
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.albumTitle {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.albumDesc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray-light);
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnSpotify, .btnApple {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btnSpotify {
+  background-color: #1DB954;
+  color: #fff;
+}
+
+.btnSpotify:hover {
+  background-color: #1ed760;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btnApple {
+  background-color: #FA243C;
+  color: #fff;
+}
+
+.btnApple:hover {
+  background-color: #ff3b50;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .info {
+    text-align: center;
+  }
+  
+  .platforms {
+    justify-content: center;
+  }
+}

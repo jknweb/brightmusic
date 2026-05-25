@@ -1,0 +1,90 @@
+.footer {
+  background-color: #050505;
+  padding: 6rem 2rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.logoImg {
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+.subtitle {
+  color: var(--gray-light);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+.contact h3, .socials h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--gray-light);
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.contactLink:hover {
+  color: #fff;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcons a {
+  color: var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .contactLink, .socialIcons {
+    justify-content: center;
+  }
+}
