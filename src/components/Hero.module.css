@@ -63,6 +63,15 @@
   text-transform: uppercase;
 }
 
+.signature {
+  margin-top: -0.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #fff;
+  font-family: 'Segoe Script', 'Lucida Handwriting', cursive;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
 .cta {
   margin-top: 2rem;
   padding: 1rem 2.5rem;
