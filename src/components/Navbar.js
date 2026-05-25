@@ -30,10 +30,11 @@ export default function Navbar() {
         </Link>
         
         <div className={styles.links}>
-          <a href="#music">Musique</a>
-          <a href="#videos">Vidéos</a>
-          <a href="#bio">Biographie</a>
-          <a href="#contact">Contact</a>
+          <Link href="/#music">Musique</Link>
+          <Link href="/#videos">Vidéos</Link>
+          <Link href="/#bio">Biographie</Link>
+          <Link href="/#contact">Contact</Link>
+          <Link href="/mon-parcours">Mon parcours</Link>
         </div>
 
         <div className={styles.socials}>

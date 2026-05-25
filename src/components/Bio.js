@@ -16,21 +16,24 @@ export default function Bio() {
         
         <div className={styles.content}>
           <h2 className={styles.title}>L'Artiste</h2>
-          <div className={styles.subtitle}>Un message d'espoir à travers la musique</div>
+          <div className={styles.subtitle}>Bienvenue dans mon univers musical.</div>
           
           <div className={styles.text}>
             <p>
-              Plongez dans l'univers de Bright Music. Inspiré par les sonorités gospel traditionnelles et les arrangements modernes, Bright Music crée des ponts entre les générations.
+              La musique est pour moi bien plus qu’un art : c’est un langage universel capable de toucher les cœurs, transmettre des émotions profondes et rapprocher les âmes. Depuis plusieurs années, je consacre mon énergie et ma passion à créer une musique authentique, inspirante et porteuse de valeurs positives.
             </p>
             <p>
-              Chaque note, chaque mélodie est conçue pour toucher les cœurs et élever les esprits. Avec une voix puissante et un message d'amour inconditionnel, l'artiste parcourt les scènes pour partager son don.
+              En tant qu’artiste musicien et chantre, mon univers musical est marqué par l’adoration, la louange et le désir de communiquer un message d’espérance, de foi et d’amour à travers chaque note et chaque parole. Mon objectif est d’utiliser la musique comme un moyen d’impact spirituel, culturel et humain.
             </p>
             <p>
-              [Ce texte est temporaire et sera remplacé par la véritable biographie issue de votre document annexe une fois fourni.]
+             À travers ce site, je vous invite à découvrir mon parcours, mes œuvres, mes projets musicaux ainsi que les événements et prestations qui rythment mon ministère artistique. Chaque chanson raconte une histoire, chaque mélodie traduit une émotion, et chaque scène devient un moment de partage avec le public.
+            </p>
+            <p>
+              Merci de faire partie de cette aventure musicale. Que cette plateforme soit pour vous un espace de découverte, d’inspiration et de bénédiction.
             </p>
           </div>
           
-          <a href="#contact" className={styles.btnContact}>Contacter pour Booking</a>
+          <a href="#contact" className={styles.btnContact}>Rhany Bright LUYINDULA</a>
         </div>
       </div>
     </section>

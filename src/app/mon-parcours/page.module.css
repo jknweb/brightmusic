@@ -1,0 +1,139 @@
+.page {
+  padding: 7rem 2rem 2rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.14), transparent 28%),
+    linear-gradient(180deg, #080808 0%, #050505 100%);
+}
+
+.hero {
+  padding: 3rem 2.5rem;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3rem;
+}
+
+.heading {
+  max-width: 760px;
+}
+
+.subtitle {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.85rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.hero p {
+  color: var(--gray-light);
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+.section,
+.sectionReverse {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sectionReverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.column,
+.columnWide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.columnWide {
+  max-width: 720px;
+}
+
+.column p,
+.columnWide p {
+  color: var(--gray-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.card,
+.cardSmall {
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 45px 110px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+  filter: brightness(1.04);
+}
+
+.caption {
+  padding: 1.2rem 1.4rem 1.4rem;
+  color: var(--gray-light);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cardSmall {
+  max-width: 500px;
+}
+
+@media (max-width: 980px) {
+  .section,
+  .sectionReverse {
+    grid-template-columns: 1fr;
+  }
+
+  .cardSmall,
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 4rem 1.25rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+}
