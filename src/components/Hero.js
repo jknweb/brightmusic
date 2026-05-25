@@ -7,7 +7,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.background}>
         <Image
-          src="/luyindula.jpeg"
+          src="/rhany.jpeg"
           alt="Bright Music Live"
           fill
           priority

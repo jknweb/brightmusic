@@ -13,15 +13,15 @@ export default function Music() {
         <div className={`${styles.content} glass`}>
           <div className={styles.coverWrapper}>
             <Image 
-              src="/rhany.jpeg" 
-              alt="Glory to the Highest - Album Cover" 
+              src="/zoe.jpeg" 
+              alt="ZOE - Album Cover" 
               width={400} 
               height={400} 
               className={styles.cover}
             />
           </div>
           <div className={styles.info}>
-            <h3 className={styles.albumTitle}>Glory to the Highest</h3>
+            <h3 className={styles.albumTitle}>Zoé</h3>
             <p className={styles.albumDesc}>Découvrez le nouvel hymne de louange, un mélange parfait entre gospel traditionnel et sonorités modernes.</p>
             
             <div className={styles.platforms}>
