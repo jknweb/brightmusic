@@ -33,8 +33,8 @@ export default function Navbar() {
           <Link href="/#music">Musique</Link>
           <Link href="/#videos">Vidéos</Link>
           <Link href="/#bio">Biographie</Link>
-          <Link href="/#contact">Contact</Link>
           <Link href="/mon-parcours">Mon parcours</Link>
+          <Link href="/#contact">Contact</Link>
         </div>
 
         <div className={styles.socials}>
