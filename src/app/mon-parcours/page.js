@@ -13,11 +13,7 @@ export default function MonParcoursPage() {
             <span className={styles.subtitle}>Mon histoire</span>
             <h1>Mon parcours artistique</h1>
             <p>
-              Depuis les premières notes chantées dans la petite église de mon quartier,
-              j'ai toujours senti que la musique était un appel plus grand que moi.
-              Ce voyage commence par des répétitions à la lueur d'une bougie, des voix
-              partagées avec des amis, et une conviction profonde que chaque chanson porte
-              un message d'espérance.
+              Je suis Rhany Bright LUYINDULA, artiste musicien et chantre du Gospel. La musique occupe une place essentielle dans ma vie depuis mon enfance. Mon histoire musicale commence véritablement en juillet 1989, lorsque mes parents m’ont conduit à l’église Logos Tabernacle Ministries. Dès cette période, j’ai grandi dans un environnement profondément marqué par la louange et l’adoration.
             </p>
           </div>
         </section>
@@ -25,16 +21,9 @@ export default function MonParcoursPage() {
         <section className={styles.section}>
           <div className={styles.column}>
             <p>
-              Mon parcours s'est construit entre studio et scène, toujours guidé par la
-              volonté de créer des hymnes accessibles, vrais et élégants. J'ai appris à
-              fusionner le gospel de mes racines avec des arrangements contemporains,
-              pour que chaque morceau résonne autant dans le cœur que dans l'âme.
-            </p>
+            À la maison de mon grand-père, nous passions beaucoup de temps à chanter en famille avec mes oncles et ma tante — Roger, Franck et Gertrude LUYINDULA. Ces moments de communion musicale ont nourri en moi l’amour du chant et ont façonné ma sensibilité artistique dès mon plus jeune âge.</p>
             <p>
-              Aujourd'hui, je travaille avec des artistes inspirants et des mentors qui
-              m'ont aidé à polir mon univers. C'est une expérience où l'<span className={styles.highlight}>exigence musicale</span>
-              rencontre la simplicité d'un message authentique.
-            </p>
+            Pendant mes années à l’école du dimanche, ma passion pour la musique gospel ne cessait de grandir. Je faisais toujours l’effort de rentrer rapidement à la maison afin de suivre les programmes musicaux du célèbre groupe Hosanna Music, notamment les chants de Ron Kenoly et Don Moen. Ces moments me permettaient de demeurer dans une atmosphère de louange qui a profondément influencé mon parcours spirituel et musical.</p>
           </div>
 
           <div className={styles.card}>
@@ -63,29 +52,23 @@ export default function MonParcoursPage() {
 
           <div className={styles.column}>
             <p>
-              Chaque concert est une nouvelle rencontre : des visages, des attentes, des émotions.
-              Mon objectif a toujours été de proposer un récit musical puissant, sans jamais perdre
-              la délicatesse et le raffinement attendus d'une création professionnelle.
-            </p>
+            En 1998, j’ai interprété mon tout premier « special » à l’église, en signe de reconnaissance et d’action de grâce envers le Seigneur. Cette expérience a marqué un tournant important dans ma vie. Quelques jours plus tard, j’ai intégré le groupe de la jeunesse appelé « Groupe Sion », où j’ai commencé à développer davantage mon ministère musical.</p>
             <p>
-              Les images que je partage ici représentent des moments forts, des instants où
-              l'engagement artistique devient une véritable source
-              d'inspiration pour mes fans et pour moi-même.
-            </p>
+            En février 2001, j’ai eu l’opportunité de chanter pour la première fois dans le grand culte avec le chant intitulé « Sa façon de me dire qu’il m’aime ». À partir de cette période, j’ai commencé à conduire la louange et l’adoration à l’église. Ce ministère s’est étendu sur vingt-quatre années, de février 2001 à février 2025, une longue expérience riche en apprentissages, en bénédictions et en rencontres spirituelles.</p>
           </div>
         </section>
 
         <section className={styles.section}>
           <div className={styles.columnWide}>
             <p>
-              En studio comme sur scène, je suis animé par la même passion : transmettre la lumière,
-              transformer l'énergie en mélodie, et inviter chacun à se retrouver dans un chant.
-              Ce parcours reste humble, mais il est déjà riche en rencontres et en projets.
+            Au fil des années, j’ai eu la grâce de composer plusieurs chansons inspirées, parmi lesquelles : Kembo na Yesu, Le bâton de Moïse, Entends nos cris, We Worship You, et bien d’autres. À travers ces œuvres, mon désir est de transmettre un message de foi, d’espérance et d’adoration authentique.</p>
+            <p>
+            Notre ministère musical ne se limite pas uniquement aux compositions originales. Nous interprétons également de nombreux cantiques et explorons plusieurs styles musicaux afin de toucher des publics variés tout en conservant l’essence du message de l’Évangile.</p>
+            <p>
+              Après mon parcours de conducteur de louange à l’église, je me suis lancé dans une nouvelle dynamique musicale à travers les réseaux sociaux, avec la production de plusieurs albums et maxi-singles. Aujourd’hui, lorsque nous sommes invités dans une église, pour un projet de concert, un live recording, un cover ou encore une soirée d’adoration, nous répondons toujours présents pour la gloire de Dieu.
             </p>
             <p>
-              Je continue aujourd'hui en m'appuyant sur des collaborations fortes, des expériences
-              partagées avec des artistes comme Rhany, et une ambition claire : faire vibrer
-              chaque auditeur avec des paroles vraies et des productions soignées.
+              Grâce aux plateformes numériques, notre musique dépasse désormais les frontières physiques : le monde entier est devenu notre paroisse, et les chants sont suivis et écoutés partout à travers le monde.
             </p>
           </div>
 
