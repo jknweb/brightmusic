@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111" />
+      <stop offset="100%" stop-color="#242424" />
+    </linearGradient>
+  </defs>
+  <rect width="720" height="540" fill="#050505" />
+  <rect x="60" y="60" width="600" height="420" rx="34" fill="url(#g3)" />
+  <path d="M120 420c120-90 240-110 360-70 90 30 156 95 180 140" fill="none" stroke="#d4af37" stroke-width="24" stroke-linecap="round" opacity="0.18" />
+  <text x="50%" y="40%" text-anchor="middle" fill="#f5f5f5" font-family="Outfit, sans-serif" font-size="44" font-weight="800">Tournée de l’Espoir</text>
+  <text x="50%" y="54%" text-anchor="middle" fill="#d4af37" font-family="Inter, sans-serif" font-size="24">Énergie et foi</text>
+</svg>

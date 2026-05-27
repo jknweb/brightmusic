@@ -34,6 +34,7 @@ export default function Navbar() {
           <Link href="/#videos">Vidéos</Link>
           <Link href="/#bio">Biographie</Link>
           <Link href="/mon-parcours">Mon parcours</Link>
+          <Link href="/events">Événements</Link>
           <Link href="/#contact">Contact</Link>
         </div>
 
