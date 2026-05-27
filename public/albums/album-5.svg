@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g5" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#221b10" />
+      <stop offset="100%" stop-color="#0a0704" />
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" fill="#080604" />
+  <rect x="90" y="90" width="540" height="540" rx="40" fill="url(#g5)" />
+  <circle cx="360" cy="360" r="110" fill="#d4af37" opacity="0.18" />
+  <text x="50%" y="45%" fill="#f7f1e8" font-family="Outfit, sans-serif" font-size="50" font-weight="800" text-anchor="middle">Au cœur</text>
+  <text x="50%" y="56%" fill="#d4af37" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">du silence</text>
+</svg>

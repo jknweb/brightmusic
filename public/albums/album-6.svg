@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g6" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#191315" />
+      <stop offset="100%" stop-color="#050404" />
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" fill="#050404" />
+  <path d="M130 520c180-220 400-180 470-100" stroke="#d4af37" stroke-width="16" fill="none" opacity="0.2" stroke-linecap="round" />
+  <rect x="90" y="90" width="540" height="540" rx="40" fill="url(#g6)" />
+  <text x="50%" y="44%" fill="#f4eee8" font-family="Outfit, sans-serif" font-size="46" font-weight="800" text-anchor="middle">Naissance</text>
+  <text x="50%" y="56%" fill="#d4af37" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">du message</text>
+</svg>

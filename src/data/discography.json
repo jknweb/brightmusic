@@ -1,0 +1,104 @@
+[
+  {
+    "id": "a1",
+    "date": "2026-04-15",
+    "year": "2026",
+    "title": "Parle-moi de la rédemption",
+    "cover": "/albums/album-1.svg",
+    "tracks": [
+      "Rédemption en moi",
+      "Chemin de grâce"
+    ],
+    "label": "Single",
+    "description": "Un titre puissant qui raconte la lumière retrouvée et la paix spirituelle.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder1",
+      "youtube": "https://www.youtube.com/watch?v=placeholder1"
+    }
+  },
+  {
+    "id": "a2",
+    "date": "2025-12-05",
+    "year": "2025",
+    "title": "Maxi-Single \"Le Bâton de Moïse\"",
+    "cover": "/albums/album-2.svg",
+    "tracks": [
+      "Le bâton est levé",
+      "Miracle nocturne"
+    ],
+    "label": "Maxi-Single",
+    "description": "Une production percutante et spirituelle, dédiée aux signes de délivrance.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder2",
+      "youtube": "https://www.youtube.com/watch?v=placeholder2"
+    }
+  },
+  {
+    "id": "a3",
+    "date": "2025-07-18",
+    "year": "2025",
+    "title": "Album \"Zoé\"",
+    "cover": "/albums/album-3.svg",
+    "tracks": [
+      "Zoé, lumière",
+      "Couronne de paix"
+    ],
+    "label": "Album",
+    "description": "Un album riche et spirituel qui porte la voix de Bright Music vers de nouveaux horizons.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder3",
+      "youtube": "https://www.youtube.com/watch?v=placeholder3"
+    }
+  },
+  {
+    "id": "a4",
+    "date": "2025-05-10",
+    "year": "2025",
+    "title": "Live recording",
+    "cover": "/albums/album-4.svg",
+    "tracks": [
+      "Au cœur du temple",
+      "Dieu, sois glorifié"
+    ],
+    "label": "Live",
+    "description": "Un enregistrement live intense, capturant toute l’émotion d’un moment de louange.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder4",
+      "youtube": "https://www.youtube.com/watch?v=placeholder4"
+    }
+  },
+  {
+    "id": "a5",
+    "date": "2024-11-01",
+    "year": "2024",
+    "title": "Parle-moi de la rédemption",
+    "cover": "/albums/album-5.svg",
+    "tracks": [
+      "Réveil de l’âme",
+      "Prière vivante"
+    ],
+    "label": "Album",
+    "description": "Une œuvre introspective qui explore l’espérance et la transformation intérieure.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder5",
+      "youtube": "https://www.youtube.com/watch?v=placeholder5"
+    }
+  },
+  {
+    "id": "a6",
+    "date": "2017-09-05",
+    "year": "2017",
+    "title": "Album \"Sur ce Fleuve\"",
+    "cover": "/albums/album-6.svg",
+    "tracks": [
+      "Sur ce fleuve",
+      "Prière pour demain"
+    ],
+    "label": "Album",
+    "description": "Le premier album qui pose les fondations du voyage gospel et spirituel de Bright Music.",
+    "links": {
+      "spotify": "https://open.spotify.com/album/placeholder6",
+      "youtube": "https://www.youtube.com/watch?v=placeholder6"
+    }
+  }
+]
