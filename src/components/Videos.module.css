@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: 5rem 1.5rem 3rem;
+  padding: 4rem 1.5rem 3rem;
   min-height: 100vh;
   background: radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 24%),
     linear-gradient(180deg, #020202 0%, #050505 100%);
@@ -15,17 +15,15 @@
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .top {
   display: grid;
   gap: 1.5rem;
-  align-items: center;
-  grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .titleGroup {
@@ -42,9 +40,9 @@
 }
 
 .title {
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   line-height: 1.02;
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .description {
@@ -54,158 +52,75 @@
   font-size: 1rem;
 }
 
-.note {
-  align-self: center;
-  color: var(--gray-light);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.5rem 1.75rem;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
-}
-
-.timeline {
-  position: relative;
-  display: grid;
-  gap: 3rem;
-  padding-left: 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 1.1rem;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.55), rgba(255, 255, 255, 0.08));
-}
-
-.yearGroup {
-  position: relative;
-  padding-left: 3rem;
-}
-
-.yearHeader {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.yearLabel {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 6rem;
-  padding: 0.9rem 1.2rem;
-  border-radius: 999px;
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.yearCards {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.timelineItem {
-  position: relative;
-  display: grid;
-  gap: 1.25rem;
-}
-
-.metaBadge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 1rem;
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  padding: 0.5rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
-  color: var(--gray-light);
-  font-size: 0.85rem;
-  font-weight: 600;
-  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.timelineItem::before {
-  content: '';
-  position: absolute;
-  left: -2.35rem;
-  top: 1.2rem;
-  width: 0.85rem;
-  height: 0.85rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 8px rgba(212, 175, 55, 0.12);
-}
-
-.yearMarker {
+.tabs::-webkit-scrollbar {
   display: none;
 }
 
-.yearMarker span {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: -0.04em;
+.tabButton {
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 700;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
 }
 
-.card {
+.tabActive {
+  background: rgba(212, 175, 55, 0.16);
+  border-color: rgba(212, 175, 55, 0.3);
+  color: #fff;
+}
+
+.albumsGrid {
   display: grid;
-  grid-template-columns: 260px 1fr;
   gap: 1.5rem;
-  align-items: center;
+}
+
+.albumCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(212, 175, 55, 0.22);
-  box-shadow: 0 38px 90px rgba(0, 0, 0, 0.28);
-}
-
-.cover {
+.albumCover {
   position: relative;
   width: 100%;
-  min-height: 220px;
+  aspect-ratio: 16 / 10;
   border-radius: 24px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.playOverlay {
-  position: absolute;
-  inset: 0;
+.albumBody {
   display: grid;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.05rem;
-  background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.32) 100%);
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  gap: 1.2rem;
 }
 
-.card:hover .playOverlay {
-  opacity: 1;
-}
-
-.cardBody {
-  display: grid;
-  gap: 1rem;
-}
-
-.cardHeader {
+.albumHeader {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .albumLabel {
@@ -217,205 +132,90 @@
 }
 
 .albumTitle {
-  font-size: 1.5rem;
-  line-height: 1.1;
-}
-
-.moreButton {
-  padding: 0.95rem 1.35rem;
-  border-radius: 999px;
-  color: var(--foreground);
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid rgba(212, 175, 55, 0.24);
-  font-weight: 700;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.moreButton:hover {
-  transform: translateY(-1px);
-  background: rgba(212, 175, 55, 0.18);
-}
-
-.trackList {
-  display: grid;
-  gap: 0.7rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.trackItem {
-  color: var(--gray-light);
-  font-size: 0.98rem;
-  line-height: 1.6;
-  position: relative;
-  padding-left: 1.4rem;
-}
-
-.trackItem::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-}
-
-.btnBottom {
-  padding: 1rem 2.5rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--foreground);
-  font-weight: 700;
-  transition: all 0.25s ease;
-}
-
-.btnBottom:hover {
-  transform: translateY(-1px);
-  background: rgba(212, 175, 55, 0.12);
-}
-
-.modalOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.78);
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
-  z-index: 300;
-}
-
-.modal {
-  width: min(900px, 100%);
-  max-height: min(90vh, 900px);
-  overflow: hidden;
-  border-radius: 28px;
-  background: rgba(8, 8, 8, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.45);
-  display: grid;
-  gap: 1.5rem;
-  animation: fadeIn 0.25s ease;
-}
-
-.modalHeader {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: flex-start;
-  padding: 1.5rem;
-}
-
-.modalYear {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.82rem;
-  margin-bottom: 0.4rem;
-}
-
-.modalTitle {
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: 1.85rem;
   line-height: 1.05;
+  margin-top: 0.4rem;
 }
 
-.modalClose {
-  padding: 0.9rem 1.3rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--foreground);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.modalClose:hover {
-  background: rgba(212, 175, 55, 0.14);
-}
-
-.modalBody {
-  display: grid;
-  gap: 1.5rem;
-  padding: 0 1.5rem 1.5rem;
-}
-
-.modalCover {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 24px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.modalContent {
-  display: grid;
-  gap: 1rem;
-}
-
-.modalDescription {
+.albumDate {
   color: var(--gray-light);
-  line-height: 1.8;
+  font-size: 0.9rem;
+  min-width: fit-content;
 }
 
-.modalTracks h4 {
-  margin-bottom: 0.75rem;
+.albumDescription {
+  color: var(--gray-light);
+  line-height: 1.75;
+}
+
+.albumTracks {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.albumTracks h4 {
   font-size: 1rem;
   color: var(--foreground);
+  margin: 0;
 }
 
-.modalTracks ul {
+.albumTracks ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.6rem;
 }
 
-.modalTracks li {
+.albumTracks li {
   color: var(--gray-light);
-  padding-left: 1.2rem;
+  padding-left: 1.3rem;
   position: relative;
+  line-height: 1.6;
 }
 
-.modalTracks li::before {
+.albumTracks li::before {
   content: '•';
   position: absolute;
   left: 0;
   color: var(--accent);
 }
 
-.modalLinks {
+.albumLinks {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
-.modalLinks a {
+.albumLinks a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.3rem;
+  padding: 0.95rem 1.2rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   color: var(--foreground);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background 0.2s ease;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.modalLinks a:hover {
+.albumLinks a:hover {
   background: rgba(212, 175, 55, 0.14);
+  transform: translateY(-1px);
 }
 
-@media (max-width: 980px) {
-  .card {
-    grid-template-columns: 1fr;
-  }
+.emptyMessage {
+  color: var(--gray-light);
+  padding: 2rem 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-  .cover {
-    min-height: 260px;
+@media (min-width: 900px) {
+  .albumCard {
+    grid-template-columns: 320px 1fr;
+    align-items: flex-start;
   }
 }
 
@@ -428,51 +228,22 @@
     grid-template-columns: 1fr;
   }
 
-  .note {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .timeline {
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  .timelineItem {
-    padding-left: 0;
-  }
-
-  .timelineItem::before {
-    display: none;
-  }
-
-  .yearMarker {
-    position: static;
-    text-align: left;
-    margin-bottom: 0.5rem;
-  }
-
-  .card {
-    padding: 1.25rem;
-  }
-
-  .modal {
-    max-height: 95vh;
+  .tabs {
+    gap: 0.7rem;
   }
 }
 
 @media (max-width: 520px) {
   .title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 
-  .card {
+  .albumCard {
+    padding: 1.25rem;
     border-radius: 22px;
   }
 
-  .moreButton, .modalClose {
+  .albumLinks a {
     width: 100%;
     justify-content: center;
   }
