@@ -3,16 +3,12 @@ import { Music2 } from 'lucide-react';
 import styles from './Music.module.css';
 
 const tracks = [
-  'Zoé',
-  'Il y a un jour qui vient',
-  'C\'est Jésus que je rève de voir',
-  'Dieu dû aimer',
-  'Le Mystère de na nouvelle naissance',
-  'Il m\'a fait grace',
-  "Kembo Alleluah",
-  'Louange à l\'agneau',
-  'Pour moi chrétien...',
-  'La Loi de la confession',
+  'Jésus le vrai Roi de mon coeur',
+  'Tu es merveilleux',
+  'Kati na makila na yo',
+  'Ceci est comme le ciel pour moi',
+  'Tout est possible à celui qui croit',
+  'Je l\'ai trouvé',
 ];
 
 export default function Music() {
@@ -30,15 +26,15 @@ export default function Music() {
         <div className={`${styles.content} glass`}>
           <div className={styles.coverWrapper}>
             <Image 
-              src="/zoe.jpeg" 
-              alt="ZOE - Album Cover" 
+              src="/redemption.jpeg" 
+              alt="Parle moi de la rédemption" 
               width={400} 
               height={400} 
               className={styles.cover}
             />
           </div>
           <div className={styles.info}>
-            <h3 className={styles.albumTitle}>Zoé</h3>
+            <h3 className={styles.albumTitle}>Parle moi de la rédemption</h3>
             <p className={styles.albumDesc}>Découvrez le nouvel album</p>
 
             <div className={styles.trackTableWrapper}>
@@ -50,10 +46,7 @@ export default function Music() {
                         <Music2 size={16} className={styles.trackIcon} />
                         {track}
                       </td>
-                      <td>
-                        <Music2 size={16} className={styles.trackIcon} />
-                        {rightTracks[index]}
-                      </td>
+          
                     </tr>
                   ))}
                 </tbody>
