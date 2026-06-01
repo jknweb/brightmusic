@@ -31,7 +31,6 @@ export default function Navbar() {
         
         <div className={styles.links}>
           <Link href="/#music">Musique</Link>
-          <Link href="/#videos">Vidéos</Link>
           <Link href="/#bio">Biographie</Link>
           <Link href="/mon-parcours">Mon parcours</Link>
           <Link href="/events">Événements</Link>
