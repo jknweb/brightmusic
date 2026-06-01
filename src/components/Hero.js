@@ -20,10 +20,15 @@ export default function Hero() {
         <h1 className={styles.title}>BRIGHT MUSIC</h1>
         <p className={styles.subtitle}>La lumière de Christ par la musique.</p>
         <p className={styles.signature}>Rhany Bright Luyindula</p>
-        <button className={styles.cta}>
+        <a
+          href="https://www.youtube.com/watch?v=_3cddQ3VelY"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.cta}
+        >
           <Play size={18} fill="currentColor" />
           <span>Écouter le dernier album</span>
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -54,7 +54,7 @@ export default function Music() {
             </div>
             
             <div className={styles.platforms}>
-              <a href="https://www.youtube.com/@RhanyLuyindula" target="_blank" rel="noopener noreferrer" className={styles.btnApple}>Écouter sur Youtube</a>
+              <a href="https://www.youtube.com/watch?v=_3cddQ3VelY" target="_blank" rel="noopener noreferrer" className={styles.btnApple}>Écouter sur Youtube</a>
             </div>
           </div>
         </div>
