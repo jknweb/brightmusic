@@ -149,11 +149,22 @@
 .modalImage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 22px;
-  /* keep aspect-ratio so next/image with fill has a defined height
-     and the modal height follows the image height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* let the image scale to fit while keeping the entire image visible */
+  max-height: 60vh;
+}
+
+@media (max-width: 640px) {
+  .modalBody {
+    grid-template-columns: 1fr;
+  }
+  .modalImage {
+    max-height: 45vh;
+  }
 }
 
 .modalInfo {
