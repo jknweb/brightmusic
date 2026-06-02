@@ -21,8 +21,8 @@ export default function Footer() {
           <div className={styles.contact}>
             <h3>Contact</h3>
             <div className={styles.contactDetails}>
-              <a href="tel:+243810602023" className={styles.contactLink}>
-                <Phone size={18} /> +243 81 060 20 23
+              <a href="tel:+243898105321" className={styles.contactLink}>
+                <Phone size={18} /> +243 89 810 53 21
               </a>
               <a href="https://wa.me/2438105321" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
                 <Phone size={18} /> +243 810 53 21 (WhatsApp)
