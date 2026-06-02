@@ -74,9 +74,9 @@ export default function EventsPage() {
                 <Image
                   src={activeEvent.photo}
                   alt={activeEvent.title}
-                  fill
-                    sizes="100vw"
-                    style={{ objectFit: 'contain' }}
+                  width={1200}
+                  height={800}
+                  style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
                 />
               </div>
               <div className={styles.modalInfo}>
