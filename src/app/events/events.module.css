@@ -100,15 +100,17 @@
 }
 
 .modal {
-  width: min(760px, 100%);
+  width: min(900px, 100%);
   background: rgba(10, 10, 10, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 28px;
-  overflow: hidden;
   box-shadow: 0 32px 120px rgba(0, 0, 0, 0.35);
   display: grid;
   gap: 1.25rem;
   animation: fadeIn 0.3s ease;
+  align-items: start;
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
 }
 
 .modalHeader {
@@ -140,6 +142,8 @@
   display: grid;
   gap: 1.25rem;
   padding: 0 1.5rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
 .modalImage {
@@ -148,6 +152,8 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 22px;
+  /* keep aspect-ratio so next/image with fill has a defined height
+     and the modal height follows the image height */
 }
 
 .modalInfo {
