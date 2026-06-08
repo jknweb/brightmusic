@@ -75,6 +75,53 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: #666;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.visits {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.visitCounter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.visitCounter:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.visitCounter svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.visitCounter span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #fff;
+  min-width: 30px;
+  text-align: center;
+}
+
+.visitCounter label {
+  color: var(--gray-light);
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -85,6 +132,21 @@
   }
   
   .contactLink, .socialIcons {
+    justify-content: center;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .visits {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .visitCounter {
+    flex: 1;
+    min-width: 120px;
     justify-content: center;
   }
 }

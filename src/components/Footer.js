@@ -1,8 +1,53 @@
 import Image from 'next/image';
-import { Camera, Tv, Music, Mail, Phone } from 'lucide-react';
+import { Camera, Tv, Music, Mail, Phone, Eye, Users } from 'lucide-react';
 import styles from './Footer.module.css';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
+  const [visits, setVisits] = useState({ totalVisits: 0, uniqueVisitors: 0 });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const trackVisit = async () => {
+      try {
+        // Générer ou récupérer un ID unique pour le visiteur
+        let visitorId = localStorage.getItem('visitorId');
+        if (!visitorId) {
+          visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+          localStorage.setItem('visitorId', visitorId);
+        }
+
+        // Envoyer la visite à l'API
+        const response = await fetch('/api/visits', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ visitorId }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setVisits(data);
+        }
+      } catch (error) {
+        console.error('Error tracking visit:', error);
+        // Essayer de récupérer les données existantes
+        try {
+          const response = await fetch('/api/visits');
+          if (response.ok) {
+            const data = await response.json();
+            setVisits(data);
+          }
+        } catch (e) {
+          console.error('Error fetching visits:', e);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    trackVisit();
+  }, []);
+
   return (
     <footer id="contact" className={styles.footer}>
       <div className={styles.container}>
@@ -48,6 +93,18 @@ export default function Footer() {
         
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} Bright Music. Tous droits réservés.</p>
+          <div className={styles.visits}>
+            <div className={styles.visitCounter}>
+              <Eye size={16} />
+              <span>{!loading ? visits.totalVisits : 0}</span>
+              <label>visites</label>
+            </div>
+            <div className={styles.visitCounter}>
+              <Users size={16} />
+              <span>{!loading ? visits.uniqueVisitors : 0}</span>
+              <label>visiteurs uniques</label>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
