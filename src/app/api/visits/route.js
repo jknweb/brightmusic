@@ -11,21 +11,36 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 // Initialiser le fichier s'il n'existe pas
-if (!fs.existsSync(VISITS_FILE)) {
-  fs.writeFileSync(VISITS_FILE, JSON.stringify({
-    totalVisits: 0,
-    uniqueVisitors: new Set(),
-  }));
-}
+const initializeVisitsFile = () => {
+  if (!fs.existsSync(VISITS_FILE)) {
+    const initialData = {
+      totalVisits: 0,
+      uniqueVisitors: []
+    };
+    fs.writeFileSync(VISITS_FILE, JSON.stringify(initialData, null, 2));
+  }
+};
+
+initializeVisitsFile();
 
 export async function POST(request) {
   try {
     const { visitorId } = await request.json();
     
+    if (!visitorId) {
+      return NextResponse.json(
+        { error: 'visitorId is required' },
+        { status: 400 }
+      );
+    }
+    
     // Lire le fichier de visites
     let visitsData = JSON.parse(fs.readFileSync(VISITS_FILE, 'utf8'));
     
-    // S'assurer que uniqueVisitors est un ensemble
+    // S'assurer que les champs existent et sont du bon type
+    if (typeof visitsData.totalVisits !== 'number') {
+      visitsData.totalVisits = 0;
+    }
     if (!Array.isArray(visitsData.uniqueVisitors)) {
       visitsData.uniqueVisitors = [];
     }
@@ -41,9 +56,22 @@ export async function POST(request) {
     // Écrire les données mises à jour
     fs.writeFileSync(VISITS_FILE, JSON.stringify(visitsData, null, 2));
     
+    console.log('Visit tracked:', {
+      visitorId,
+      totalVisits: visitsData.totalVisits,
+      uniqueVisitorsCount: visitsData.uniqueVisitors.length
+    });
+    
+    // Désactiver le caching
     return NextResponse.json({
       totalVisits: visitsData.totalVisits,
       uniqueVisitors: visitsData.uniqueVisitors.length,
+    }, {
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
     });
   } catch (error) {
     console.error('Error tracking visit:', error);
@@ -63,14 +91,24 @@ export async function GET() {
     }
     
     return NextResponse.json({
-      totalVisits: visitsData.totalVisits,
-      uniqueVisitors: visitsData.uniqueVisitors.length,
+      totalVisits: visitsData.totalVisits || 0,
+      uniqueVisitors: visitsData.uniqueVisitors.length || 0,
+    }, {
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
     });
   } catch (error) {
     console.error('Error reading visits:', error);
     return NextResponse.json(
       { totalVisits: 0, uniqueVisitors: 0 },
-      { status: 200 }
+      { status: 200,
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate'
+        }
+      }
     );
   }
 }

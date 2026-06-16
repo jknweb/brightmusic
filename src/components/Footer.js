@@ -19,24 +19,34 @@ export default function Footer() {
           localStorage.setItem('visitorId', visitorId);
         }
 
-        // Envoyer la visite à l'API
+        // Envoyer la visite à l'API avec cache désactivé
         const response = await fetch('/api/visits', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+          },
           body: JSON.stringify({ visitorId }),
+          cache: 'no-store',
         });
 
         if (response.ok) {
           const data = await response.json();
+          console.log('Compteurs mis à jour:', data);
           setVisits(data);
+        } else {
+          console.error('Erreur API:', response.status);
         }
       } catch (error) {
         console.error('Error tracking visit:', error);
         // Essayer de récupérer les données existantes
         try {
-          const response = await fetch('/api/visits');
+          const response = await fetch('/api/visits', {
+            cache: 'no-store',
+          });
           if (response.ok) {
             const data = await response.json();
+            console.log('Compteurs récupérés (GET):', data);
             setVisits(data);
           }
         } catch (e) {
