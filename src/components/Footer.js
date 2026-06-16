@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { Camera, Tv, Music, Mail, Phone, Eye, Users } from 'lucide-react';
 import styles from './Footer.module.css';
@@ -61,6 +63,26 @@ export default function Footer() {
               className={styles.logoImg}
             />
             <p className={styles.subtitle}>Gospel Artist & Worshipper</p>
+            <div className={styles.statsContainer}>
+              <div className={styles.statCard}>
+                <div className={styles.statIcon}>
+                  <Eye size={20} />
+                </div>
+                <div className={styles.statContent}>
+                  <span className={styles.statNumber}>{!loading ? visits.totalVisits : 0}</span>
+                  <label className={styles.statLabel}>Visites</label>
+                </div>
+              </div>
+              <div className={styles.statCard}>
+                <div className={styles.statIcon}>
+                  <Users size={20} />
+                </div>
+                <div className={styles.statContent}>
+                  <span className={styles.statNumber}>{!loading ? visits.uniqueVisitors : 0}</span>
+                  <label className={styles.statLabel}>Visiteurs</label>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className={styles.contact}>
@@ -93,18 +115,7 @@ export default function Footer() {
         
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} Bright Music. Tous droits réservés.</p>
-          <div className={styles.visits}>
-            <div className={styles.visitCounter}>
-              <Eye size={16} />
-              <span>{!loading ? visits.totalVisits : 0}</span>
-              <label>visites</label>
-            </div>
-            <div className={styles.visitCounter}>
-              <Users size={16} />
-              <span>{!loading ? visits.uniqueVisitors : 0}</span>
-              <label>visiteurs uniques</label>
-            </div>
-          </div>
+
         </div>
       </div>
     </footer>

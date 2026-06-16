@@ -27,6 +27,66 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.statCard:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.08) 100%);
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.15);
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 50%;
+  color: #FFD700;
+  flex-shrink: 0;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.statNumber {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFD700;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--gray-light);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .contact h3, .socials h3 {
@@ -131,22 +191,22 @@
     text-align: center;
   }
   
+  .statsContainer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .statCard {
+    flex: 1;
+    min-width: 130px;
+  }
+  
   .contactLink, .socialIcons {
     justify-content: center;
   }
 
   .bottom {
     flex-direction: column;
-  }
-
-  .visits {
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .visitCounter {
-    flex: 1;
-    min-width: 120px;
-    justify-content: center;
   }
 }
