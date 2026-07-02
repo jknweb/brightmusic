@@ -1,0 +1,133 @@
+.gallery {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.thumbBtn {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  display: block;
+}
+
+.thumbWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumbBtn:hover .thumb {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.25) 100%);
+  opacity: 0;
+  transition: opacity 180ms ease, transform 220ms ease;
+}
+
+.thumbBtn:hover .overlay {
+  opacity: 1;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,2,2,0.85);
+  z-index: 9999;
+  padding: 2rem;
+}
+
+
+.lightboxContent {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.98);
+  opacity: 0;
+}
+
+.animateIn {
+  animation: zoomIn 260ms ease forwards;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.full {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  font-size: 2.25rem;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: 0;
+  font-size: 2.25rem;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav:hover { background: rgba(0,0,0,0.6); }
+
+.prev { left: -28px; }
+.next { right: -28px; }
+
+@media (max-width: 600px) {
+  .thumb { height: 120px; }
+  .lightboxContent { padding: 0 1rem; }
+  .close { top: -1.8rem; font-size: 1.6rem; }
+}
+
+.empty { opacity: 0.8; padding: 2rem 0; text-align: center; }
