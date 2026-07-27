@@ -86,7 +86,14 @@
 
 .cardText {
   color: var(--gray-light);
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.6;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .modalOverlay {
@@ -182,7 +189,9 @@
 .modalDescription {
   color: var(--gray-light);
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 768px) {
