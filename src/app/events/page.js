@@ -80,7 +80,9 @@ export default function EventsPage() {
                 />
               </div>
               <div className={styles.modalInfo}>
-                <p className={styles.modalDescription}>{activeEvent.description}</p>
+                <div className={styles.modalDescriptionCard}>
+                  <p className={styles.modalDescription}>{activeEvent.description}</p>
+                </div>
               </div>
             </div>
           </div>
